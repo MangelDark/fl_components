@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class AppTheme {
 
-  static const Color primary = Colors.indigo;
+  static const Color primary = Colors.orange;
 
   static final ThemeData lightTheme =  ThemeData.light().copyWith(
         //Color primario
@@ -13,6 +13,22 @@ class AppTheme {
           color: primary,
           elevation: 0
         ),
+          textButtonTheme: TextButtonThemeData(
+          style: TextButton.styleFrom(
+            foregroundColor: primary
+          ),
+        ),
+        floatingActionButtonTheme: const FloatingActionButtonThemeData(
+          backgroundColor: primary,
+          elevation: 0
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: primary,
+            elevation: 0,
+            shape: const StadiumBorder()
+          )
+        )
       );
 
   static final ThemeData darkTheme = ThemeData.dark().copyWith(
@@ -23,6 +39,12 @@ class AppTheme {
           color: primary,
           elevation: 0
         ),
-        scaffoldBackgroundColor: Colors.black
+        scaffoldBackgroundColor: Colors.black,
+        //TextButton theme
+        textButtonTheme: TextButtonThemeData(
+          style: TextButton.styleFrom(
+            foregroundColor: primary
+          )
+        )
       );
 }

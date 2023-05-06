@@ -1,5 +1,6 @@
-import 'package:fl_components/theme/app_theme.dart';
 import 'package:flutter/material.dart';
+
+import 'package:fl_components/widgets/widgets.dart';
 
 class CardScreen extends StatelessWidget{
    
@@ -13,22 +14,13 @@ class CardScreen extends StatelessWidget{
       ),
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-        children:  [
-
-          Card(
-            child: Column(
-              children: const [
-               ListTile(
-                leading: Icon(Icons.photo_album_outlined,color: AppTheme.primary,),
-                title: Text("Soy un titulo"),
-                subtitle: Text("Laborum minim eiusmod sint minim laborum Lorem qui Lorem enim quis est."),
-               ) 
-              ]
-              ),
-          )
-        
-        ],
+        children: const [
+          CustomCardType2(imageUrl: 'https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',labelImage: "Beautiful View of Moraine Lake",)
+          ,SizedBox(height: 10,),
+          CustomCardType2(imageUrl: 'https://images.pexels.com/photos/2325446/pexels-photo-2325446.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', )
+       ],
       )
      );
     }
  }
+
